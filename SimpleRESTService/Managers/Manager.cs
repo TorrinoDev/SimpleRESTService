@@ -2,59 +2,49 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using ModelLib.model;
+using ModelLib;
 
 namespace SimpleRESTService.Managers
 {
 	public class Manager : IManager
 	{
-		private static List<Item> items = new List<Item>()
+		private static List<FootballPlayer> players = new List<FootballPlayer>()
 		{
-			new Item(1, "Bread", "Low", 33),
-			new Item(2,"Bread","Middle",21),
-			new Item(3,"Beer","Low",70.5),
-			new Item(4,"Soda","High",21.4),
-			new Item(5,"Milk","Low",55.8)
+			new FootballPlayer(1, "Brandon", 200000, 3),
+			new FootballPlayer(2, "Wayne", 120000, 12),
+			new FootballPlayer(3, "Salem", 150000, 19),
+			new FootballPlayer(4, "Jason", 220000, 34),
+			new FootballPlayer(4, "Lars", 300000, 4),
 		};
-		public IEnumerable<Item> Get()
+		public IEnumerable<FootballPlayer> Get()
 		{
-			return new List<Item>(items);
+			return new List<FootballPlayer>(players);
 		}
 
-		public Item Get(int id)
+		public FootballPlayer Get(int id)
 		{
-			if (items.Exists(i => i.Id == id))
+			if (players.Exists(i => i.Id == id))
 			{
-				return items.Find(i => i.Id == id);
+				return players.Find(i => i.Id == id);
 			}
 			throw new KeyNotFoundException();
 		}
 
-		public IEnumerable<Item> GetFromSubstring(string substring)
+		public bool Create(FootballPlayer value)
 		{
-			return new List<Item>(items.Where(i => i.Name.Contains(substring)));
-		}
-
-		public IEnumerable<Item> GetFromItemQuality(string itemQuality)
-		{
-			return new List<Item>(items.Where(i => i.ItemQuality.Equals(itemQuality)));
-		}
-
-		public bool Create(Item value)
-		{
-			items.Add(value);
+			players.Add(value);
 			return true;
 		}
 
-		public bool Update(int id, Item value)
+		public bool Update(int id, FootballPlayer value)
 		{
-			Item item = Get(id);
-			if (item != null)
+			FootballPlayer player = Get(id);
+			if (player != null)
 			{
-				item.Id = value.Id;
-				item.Name = value.Name;
-				item.ItemQuality = value.ItemQuality;
-				item.AmountQuantity = value.AmountQuantity;
+				player.Id = value.Id;
+				player.Name = value.Name;
+				player.Price = value.Price;
+				player.ShirtNumber = value.ShirtNumber;
 
 				return true;
 			}
@@ -62,11 +52,11 @@ namespace SimpleRESTService.Managers
 			return false;
 		}
 
-		public Item Delete(int id)
+		public FootballPlayer Delete(int id)
 		{
-			Item item = Get(id);
-			items.Remove(item);
-			return item;
+			FootballPlayer player = Get(id);
+			players.Remove(player);
+			return player;
 		}
 	}
 }

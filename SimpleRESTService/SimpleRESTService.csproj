@@ -9,7 +9,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ModelLib\ModelLib.csproj" />
+    <ProjectReference Include="..\..\FootballRestraints\ModelLib\ModelLib.csproj" />
   </ItemGroup>
 
 </Project>
