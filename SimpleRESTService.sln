@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleRESTService", "SimpleRESTService\SimpleRESTService.csproj", "{7695C3D7-D05D-46E8-99EE-782F7E652B81}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ModelLib", "ModelLib\ModelLib.csproj", "{60826907-6568-4223-A1DD-522909DD3296}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7695C3D7-D05D-46E8-99EE-782F7E652B81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7695C3D7-D05D-46E8-99EE-782F7E652B81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7695C3D7-D05D-46E8-99EE-782F7E652B81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7695C3D7-D05D-46E8-99EE-782F7E652B81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60826907-6568-4223-A1DD-522909DD3296}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60826907-6568-4223-A1DD-522909DD3296}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60826907-6568-4223-A1DD-522909DD3296}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60826907-6568-4223-A1DD-522909DD3296}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {970A736A-7CB9-47FA-AE40-5050DDA04D92}
+	EndGlobalSection
+EndGlobal
